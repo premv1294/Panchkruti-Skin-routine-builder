@@ -1,0 +1,10 @@
+import {GiftGuide} from '../components/guide/GiftGuide';
+import {Link} from 'wouter';
+import {concerns} from '../data/concerns';
+import {activeProducts} from '../data/products';
+import {PageIntro,ProductCard,EmptyState} from '../components/guide/shared';
+export default function Concerns({slug}:{slug?:string}){
+const concern=concerns.find(c=>c.id===slug);
+if(slug&&!concern)return <div className="page-width"><EmptyState headingLevel={1} title="Concern not found"><Link href="/concerns">Explore all concerns</Link></EmptyState></div>;
+return <div className="page-width page-content"><PageIntro eyebrow="CONCERN FIRST" title={concern?.name||'A starting point for your skin.'}><p>{concern?.description||'Choose what you want to understand. We’ll show which guides are available.'}</p></PageIntro>{!concern&&<GiftGuide/>}{concern?<>{concern.routineId?<div className="callout"><h2>Cream by morning. Serum by night.</h2><p>See the supplied Panchkruti routine or answer a few questions for context.</p><div className="actions"><Link className="button" href={'/routine/'+concern.routineId}>View routine</Link><Link className="button secondary" href="/routine-builder">Build my routine</Link></div></div>:<p className="notice">A reviewed routine is not available for this concern yet. The products below are catalogue references, not a personalised recommendation.</p>}<h2 className="subheading">Explore related products</h2><div className="product-grid">{activeProducts.filter(p=>p.concernIds.includes(concern.id)).map(p=><ProductCard key={p.id} product={p}/>)}</div>{!activeProducts.some(p=>p.concernIds.includes(concern.id))&&<EmptyState title="Guidance is being prepared"><p>We do not have verified product suitability to show for this concern.</p><Link href="/products">Explore all product guides</Link></EmptyState>}</>:<div className="directory-grid">{concerns.map(c=><Link className="directory-card" key={c.id} href={'/concerns/'+c.id}><p className="eyebrow">{c.routineId?'ROUTINE AVAILABLE':'EDUCATION'}</p><h2>{c.name}</h2><p>{c.description}</p><span className="text-link">Explore concern →</span></Link>)}</div>}</div>;
+}

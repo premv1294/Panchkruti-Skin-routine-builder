@@ -1,0 +1,34 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {recommend,getRoutine} from '../src/domain/recommendations';
+import {products,getProduct} from '../src/data/products';
+import ingredients from '../src/data/ingredients.json';
+import {getCompatibility} from '../src/data/compatibility';
+import {questions,validAnswers} from '../src/data/questionnaire';
+import {loadRoutine,saveRoutine,STORAGE_KEY} from '../src/services/storage';
+import {CONTENT_VERSION} from '../src/data/routineRules';
+import {purchaseUrl} from '../src/services/commerce';
+import {configureAnalytics,track} from '../src/services/analytics';
+const answers={concern:'pigmentation',skinType:'dry',sensitivity:'low',currentProducts:'basics',sunscreen:'regular',experience:'experienced'};
+const storage=()=>{const map=new Map<string,string>();return {getItem:(k:string)=>map.get(k)??null,setItem:(k:string,v:string)=>{map.set(k,v);},removeItem:(k:string)=>{map.delete(k);},clear:()=>map.clear(),key:()=>null,get length(){return map.size;}} as Storage;};
+test('pigmentation sequence has exactly the supplied AM and PM products',()=>{const r=getRoutine('pigmentation')!;assert.deepEqual(r.morning.map(s=>s.productId),['spotless-radiance-facewash','dark-spot-cream','sunscreen-spf-50-pa-plus-plus-plus']);assert.deepEqual(r.night.map(s=>s.productId),['spotless-radiance-facewash','dark-spot-serum']);});
+test('unsupported concern never receives pigmentation fallback',()=>{for(const q of questions[0].options.filter(o=>o.value!=='pigmentation'))assert.equal(recommend({...answers,concern:q.value}).status,'unavailable');});
+test('missing, malformed and invalid answers cannot complete a routine',()=>{assert.equal(validAnswers(null),false);assert.equal(recommend({}).status,'incomplete');assert.equal(recommend({...answers,sensitivity:'made-up'}).status,'incomplete');});
+test('sensitive and prescription answers add notices without inventing dosage',()=>{const r=recommend({...answers,sensitivity:'high',currentProducts:'prescription',experience:'new',sunscreen:'no'});assert.equal(r.notices.length,4);assert.deepEqual(r.routine,getRoutine('pigmentation'));});
+test('all ingredient links resolve and catalogue IDs are unique',()=>{assert.equal(new Set(products.map(p=>p.id)).size,products.length);for(const p of products)for(const id of p.ingredientIds)assert.ok(ingredients.some(i=>i.id===id));});
+test('current price overrides and discontinued status take precedence',()=>{for(const id of ['dark-spot-cream','acne-defense-gel','sunscreen-spf-50-pa-plus-plus-plus'])assert.equal(getProduct(id)?.mrp,499);assert.equal(getProduct('acne-defense-serum')?.status,'discontinued');});
+test('unreviewed compatibility is unknown in either selection order',()=>{assert.equal(getCompatibility('dark-spot-serum','acne-defense-gel').status,'unknown');assert.deepEqual(getCompatibility('a','b'),getCompatibility('b','a'));assert.equal(getCompatibility('a','a').status,'incomplete');});
+test('saved routine can round trip; corrupt and old content fail closed',()=>{const s=storage();assert.equal(loadRoutine(s).status,'empty');assert.equal(saveRoutine(s,answers),true);assert.deepEqual(loadRoutine(s),{status:'ready',answers});s.setItem(STORAGE_KEY,'invalid JSON');assert.equal(loadRoutine(s).status,'unavailable');s.setItem(STORAGE_KEY,JSON.stringify({schema:1,version:'old',answers}));assert.equal(loadRoutine(s).status,'outdated');s.setItem(STORAGE_KEY,JSON.stringify({schema:1,version:CONTENT_VERSION,answers:{}}));assert.equal(loadRoutine(s).status,'invalid');});
+test('blocked storage does not crash',()=>{const s={setItem:()=>{throw Error('denied');},getItem:()=>{throw Error('denied');}} as unknown as Storage;assert.equal(saveRoutine(s,answers),false);assert.equal(loadRoutine(s).status,'unavailable');});
+test('no missing or discontinued commerce destination becomes an active link',()=>{for(const p of products)assert.equal(purchaseUrl(p),null);});
+test('analytics adapter failure cannot break navigation',()=>{configureAnalytics(()=>{throw Error('offline');});assert.doesNotThrow(()=>track('routine_viewed',{routineId:'pigmentation'}));configureAnalytics(()=>{});});
+test('confirmed current formula entries do not restore obsolete gel or sunscreen',()=>{assert.ok(getProduct('acne-defense-gel')!.keyIngredients.some(x=>x.includes('Succinic Acid')));assert.ok(!getProduct('acne-defense-gel')!.keyIngredients.some(x=>x.includes('Mandelic')));assert.ok(getProduct('sunscreen-spf-50-pa-plus-plus-plus')!.keyIngredients.some(x=>x.includes('Ethylhexyl Triazone')));assert.equal(getProduct('sunscreen-spf-50-pa-plus-plus-plus')!.fullIngredients,null);});
+
+import {ingredientDirectory,ingredientMemberIds,groupedIngredientLinks} from '../src/data/ingredientLibrary';
+test('ingredient directory groups acids and searches child names',()=>{const ids=ingredientDirectory().map(i=>i.id);assert.ok(ids.includes('aha')&&ids.includes('bha'));for(const id of ['glycolic-acid','lactic-acid','salicylic-acid'])assert.ok(!ids.includes(id));assert.deepEqual(ingredientDirectory('lactic').map(i=>i.id),['aha']);assert.deepEqual(ingredientDirectory('salicylic').map(i=>i.id),['bha']);});
+test('family links retain exact product members without inferring unspecified acids',()=>{assert.deepEqual(groupedIngredientLinks(['aha'])[0].children,[]);const links=groupedIngredientLinks(['glycolic-acid','lactic-acid','salicylic-acid']);assert.deepEqual(links.map(i=>i.id),['aha','bha']);assert.equal(links[0].children.length,2);assert.deepEqual(ingredientMemberIds('bha'),['bha','salicylic-acid']);});
+
+import {giftSelection,giftRoutineReferences,giftPairing,parseGiftProducts} from '../src/domain/giftGuide';
+test('gift selection rejects unknown and discontinued products and deduplicates',()=>{assert.deepEqual(giftSelection(['not-a-product','acne-defense-serum']),[]);assert.equal(giftSelection(['dark-spot-cream','dark-spot-cream']).length,1);assert.deepEqual(parseGiftProducts('dark-spot-cream,invalid'),['dark-spot-cream']);assert.deepEqual(parseGiftProducts(null),[]);});
+test('gift selection retains missing reference steps without inventing a new routine',()=>{const r=giftRoutineReferences(['dark-spot-cream','acne-defense-face-wash'])[0];assert.equal(r.morning.length,3);assert.deepEqual(r.morning.filter(s=>s.received).map(s=>s.productId),['dark-spot-cream']);assert.ok(!r.night.some(s=>s.received));assert.deepEqual(giftRoutineReferences(['rose-toner']),[]);});
+test('gift pairing distinguishes source order from compatibility',()=>{const p=giftPairing('dark-spot-cream','spotless-radiance-facewash');assert.deepEqual(p.references[0].orderedIds,['spotless-radiance-facewash','dark-spot-cream']);assert.equal(p.guidance.status,'unknown');assert.deepEqual(giftPairing('dark-spot-cream','dark-spot-serum').references,[]);assert.equal(giftPairing('dark-spot-cream','dark-spot-cream').guidance.status,'incomplete');});

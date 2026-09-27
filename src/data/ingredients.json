@@ -1,0 +1,219 @@
+[
+  {
+    "id": "alpha-arbutin",
+    "slug": "alpha-arbutin",
+    "name": "Alpha Arbutin",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "niacinamide",
+    "slug": "niacinamide",
+    "name": "Niacinamide",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "acne",
+      "hydration",
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "aha",
+    "slug": "aha",
+    "name": "Alpha Hydroxy Acids (AHAs)",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": true
+  },
+  {
+    "id": "glycolic-acid",
+    "slug": "glycolic-acid",
+    "name": "Glycolic Acid",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": "aha",
+    "isFamily": false
+  },
+  {
+    "id": "lactic-acid",
+    "slug": "lactic-acid",
+    "name": "Lactic Acid",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "acne",
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": "aha",
+    "isFamily": false
+  },
+  {
+    "id": "licorice",
+    "slug": "licorice",
+    "name": "Licorice / Liquorice",
+    "type": "Ayurvedic",
+    "function": null,
+    "relevantConcernIds": [
+      "acne",
+      "hydration",
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "manjistha",
+    "slug": "manjistha",
+    "name": "Manjistha",
+    "type": "Ayurvedic",
+    "function": null,
+    "relevantConcernIds": [
+      "acne",
+      "hydration",
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "gotu-kola",
+    "slug": "gotu-kola",
+    "name": "Gotu Kola",
+    "type": "Ayurvedic",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "glutathione",
+    "slug": "glutathione",
+    "name": "L-Glutathione",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "curcumin",
+    "slug": "curcumin",
+    "name": "Curcumin Extract",
+    "type": "Ayurvedic",
+    "function": null,
+    "relevantConcernIds": [
+      "pigmentation"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "bha",
+    "slug": "bha",
+    "name": "Beta Hydroxy Acids (BHAs)",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "acne"
+    ],
+    "usageConsiderations": null,
+    "source": "Ingredient grouping requested by the user, 2026-09-22.",
+    "parentId": null,
+    "isFamily": true
+  },
+  {
+    "id": "salicylic-acid",
+    "slug": "salicylic-acid",
+    "name": "Salicylic Acid",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "acne"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": "bha",
+    "isFamily": false
+  },
+  {
+    "id": "succinic-acid",
+    "slug": "succinic-acid",
+    "name": "Succinic Acid",
+    "type": "Modern active",
+    "function": null,
+    "relevantConcernIds": [
+      "acne"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "ceramide-complex",
+    "slug": "ceramide-complex",
+    "name": "Ceramide Complex",
+    "type": "Supporting",
+    "function": null,
+    "relevantConcernIds": [
+      "hydration"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  },
+  {
+    "id": "zinc-oxide",
+    "slug": "zinc-oxide",
+    "name": "Zinc Oxide",
+    "type": "Supporting",
+    "function": null,
+    "relevantConcernIds": [
+      "sun-protection"
+    ],
+    "usageConsiderations": null,
+    "source": "Linked product formulation records; classification is editorial, not an efficacy claim.",
+    "parentId": null,
+    "isFamily": false
+  }
+]

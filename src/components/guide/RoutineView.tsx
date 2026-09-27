@@ -1,0 +1,9 @@
+import {Sun,Moon,ArrowUpRight} from 'lucide-react';
+import {Link} from 'wouter';
+import {getRoutine} from '../../domain/recommendations';
+import {track} from '../../services/analytics';
+import {IngredientChips,InfoAccordion} from './shared';
+export function RoutineView({id='pigmentation',compact=false}:{id?:string;compact?:boolean}){
+const routine=getRoutine(id);if(!routine)return <p className="notice">This routine is currently unavailable.</p>;
+return <div className={'routine-grid '+(compact?'compact':'')}>{(['morning','night'] as const).map(time=><section key={time} className={'routine-panel '+time} aria-label={time+' routine'}><div className="routine-heading"><span>{time==='morning'?<Sun size={21}/>:<Moon size={21}/>} {time==='morning'?'Morning':'Night'}</span><span>{time==='morning'?'AM':'PM'}</span></div><p className="routine-tagline">{time==='morning'?'Cream + Protect':'Serum + Correct'}</p><ol>{routine[time].map((step,index)=>{const p=step.product!;return <li key={p.id}><div className="step-row"><span className="step-number">0{index+1}</span><div><span className="step-purpose">{step.purpose}</span><Link href={'/product/'+p.slug} onClick={()=>track('routine_product_clicked',{id:p.id,routineId:id})}>{p.name}</Link></div><ArrowUpRight size={16} aria-hidden="true"/></div>{!compact&&<InfoAccordion title="How to use & ingredients"><p><strong>Purpose:</strong> {step.purpose} — step {index+1} in the supplied {time} sequence.</p><p><strong>Amount:</strong> Not supplied. Refer to the current product pack.</p><p><strong>Application:</strong> {p.usage.instructions||'Follow current product directions; detailed instructions are not available here yet.'}</p><p><strong>Frequency:</strong> Not confirmed. AM/PM indicates routine placement, not a daily use instruction.</p><IngredientChips product={p}/><p className="muted">Product-specific precautions and individual suitability need confirmation.</p></InfoAccordion>}</li>;})}</ol></section>)}</div>;
+}

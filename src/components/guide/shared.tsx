@@ -1,0 +1,13 @@
+import type {ReactNode} from 'react';
+import {Link} from 'wouter';
+import {ArrowUpRight} from 'lucide-react';
+import type {Product} from '../../data/products';
+import {groupedIngredientLinks} from '../../data/ingredientLibrary';
+import {purchaseUrl} from '../../services/commerce';
+import {track} from '../../services/analytics';
+export function PageIntro({eyebrow,title,children}:{eyebrow:string;title:string;children?:ReactNode}){return <div className="page-intro"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{children&&<div className="intro-copy">{children}</div>}</div>;}
+export function EmptyState({title,children,headingLevel=2}:{title:string;children:ReactNode;headingLevel?:1|2}){const Heading=headingLevel===1?'h1':'h2';return <div className="empty-state"><Heading>{title}</Heading><div>{children}</div></div>;}
+export function IngredientChips({product}:{product:Product}){return product.ingredientIds.length ? <div className="chips">{groupedIngredientLinks(product.ingredientIds).map(group=><Link className="chip" key={group.id} href={'/ingredients/'+group.slug}>{group.name}{group.children.length>0?' — '+group.children.map(i=>i.name).join(', '):''}</Link>)}</div>:<p className="muted">Ingredient details are being confirmed.</p>;}
+export function ProductCard({product}:{product:Product}){return <article className="product-card"><div className="product-card-top"><span className="eyebrow">{product.category.replaceAll('-',' ')}</span><ArrowUpRight size={19} aria-hidden="true"/></div><h3><Link href={'/product/'+product.slug}>{product.name}</Link></h3><p>{product.description}</p><div className="product-card-bottom"><span>{product.size.value} {product.size.unit}</span><span>{product.mrp===null?'MRP pending':'MRP ₹'+product.mrp}</span></div>{product.status==='discontinued'&&<p className="notice">Discontinued</p>}</article>;}
+export function PurchaseAction({product}:{product:Product}){const url=purchaseUrl(product);return url?<a className="button" href={url} onClick={()=>track('buy_product_clicked',{id:product.id})}>Buy product <ArrowUpRight size={16}/></a>:<div className="purchase-unavailable"><strong>{product.status==='discontinued'?'Discontinued':'Online purchase link coming soon'}</strong><p>{product.status==='discontinued'?'This product is excluded from recommendations.':'Current selling price and availability are not yet connected.'}</p></div>;}
+export function InfoAccordion({title,children,open=false}:{title:string;children:ReactNode;open?:boolean}){return <details className="info-accordion" open={open}><summary>{title}</summary><div>{children}</div></details>;}

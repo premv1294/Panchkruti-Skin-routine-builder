@@ -1,0 +1,884 @@
+[
+  {
+    "id": "acne-defense-face-wash",
+    "slug": "acne-defense-face-wash",
+    "name": "Acne Defense Face Wash",
+    "shortName": "Acne Defense Face Wash",
+    "aliases": [
+      "Anti-Acne Facewash With BHA"
+    ],
+    "category": "cleanser",
+    "status": "active",
+    "concernIds": [
+      "acne"
+    ],
+    "mrp": 299,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Acne Defense Face Wash in the Panchkruti cleansing range.",
+    "longDescription": null,
+    "fullIngredients": "Aqua, Red Volcano(Rhassoul clay) Powder -3%, Sodium Methyl Cocoyl Taurate, PEG 150 di stearate, Cocamidopropyl Betaine\nDecyl Glucoside, Lauryl Glucoside, Glycerin, Lodhra Ext.2%, Manjistha Ext.2%, Nagkesar Ext.2%, Anantmul Ext.2%, Salicylic Acid-0.5%, Allantoin 1%, Sodium PCA 2%, Fragrance, Potassium hydroxide, Phenoxyethanol, DMDM,Benzyl Alcohol",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Rhassoul (Red Volcano) Clay — 3%",
+      "Salicylic Acid — 0.5%",
+      "Nagkesar — 2%",
+      "Manjistha — 2%"
+    ],
+    "ingredientIds": [
+      "manjistha",
+      "salicylic-acid"
+    ],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B2:E2",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D2:E2",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spotless-radiance-facewash",
+    "slug": "spotless-radiance-facewash",
+    "name": "Spotless Radiance Facewash",
+    "shortName": "Spotless Radiance Facewash",
+    "aliases": [
+      "Dark Spot Removal Facewash with AHA"
+    ],
+    "category": "cleanser",
+    "status": "active",
+    "concernIds": [
+      "pigmentation"
+    ],
+    "mrp": 299,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Spotless Radiance Facewash in the Panchkruti cleansing range.",
+    "longDescription": null,
+    "fullIngredients": "Aqua, Decyl Glucoside, Lauryl Glucoside, Cocamidopropyl Betaine, Glycerin, Sodium Methyl Cocoyl Taurate,PEG 150 di stearate, Glycolic Acid 1%, Lactic Acid 1%, Allantoin 1%, Jasud Ext 2%, Palash Ext 2%, Liquorice Ext. 2%, Honey 3%, Haldi Ext. 2%, Green tea Ext.2%,Sodium PCA, Fragrance, Phenoxyethanol, DMDM, Benzyl Alcohol",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Glycolic Acid — 1%",
+      "Lactic Acid — 1%",
+      "Jasud (Hibiscus) Extract — 2%Haldi (Turmeric) Extract — 2%",
+      "Liquorice Extract — 2%"
+    ],
+    "ingredientIds": [
+      "glycolic-acid",
+      "lactic-acid",
+      "licorice"
+    ],
+    "benefits": [],
+    "timing": [
+      "AM",
+      "PM"
+    ],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B3:E3",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D5:E5",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vitamin-c-facewash",
+    "slug": "vitamin-c-facewash",
+    "name": "Vitamin C Facewash",
+    "shortName": "Vitamin C Facewash",
+    "aliases": [
+      "Panchkruti Vitamin C Facewash With 7x Fruit Complex"
+    ],
+    "category": "cleanser",
+    "status": "active",
+    "concernIds": [
+      "dullness"
+    ],
+    "mrp": 299,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Vitamin C Facewash in the Panchkruti cleansing range.",
+    "longDescription": null,
+    "fullIngredients": null,
+    "ingredientStatus": "missing",
+    "keyIngredients": [],
+    "ingredientIds": [],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B4:E4",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hydra-dew-facewash",
+    "slug": "hydra-dew-facewash",
+    "name": "Hydra Dew Facewash",
+    "shortName": "Hydra Dew Facewash",
+    "aliases": [
+      "Panchkruti Hydrating Facewash With Ceramide Complex"
+    ],
+    "category": "cleanser",
+    "status": "active",
+    "concernIds": [
+      "hydration"
+    ],
+    "mrp": 299,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Hydra Dew Facewash in the Panchkruti cleansing range.",
+    "longDescription": null,
+    "fullIngredients": "Aqua, Sodium Cocoyl Methyl Taurate, Sodium Cocoyl Isethionate, Cocamidopropyl Hydroxysultain, Cocamidopropyl Betaine, D-Panthenol, Brassicamidopropyl Dimethylamine, Cetyl Alcohol & Butylene Glycol, Sodium Lauryl Lactate, Zinc PCA, Allantoin, 4% Betaine, 2% Niacinamide, 1% AQUAXYL™, 1% PRODEW® 500, 1% Collagen, 0.5% Hyaluronic Acid, 0,4% Ceramide Complex, 2% Ashwagandha Ext., 2% Manjistha Ext., 2% Aloe Vera Ext., 2% Honey Ext., 2% Vanilla Ext., Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "1% PRODEW® 500",
+      "0.4% Ceramide Complex",
+      "2% Ashwagandha Ext.",
+      "2% Aloe Vera Ext"
+    ],
+    "ingredientIds": [
+      "niacinamide",
+      "manjistha",
+      "ceramide-complex"
+    ],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B5:E5",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D10:E10",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vitamin-c-face-serum",
+    "slug": "vitamin-c-face-serum",
+    "name": "Vitamin C Face Serum",
+    "shortName": "Vitamin C Face Serum",
+    "aliases": [
+      "Panchkruti Vitamin C Face Serum With 7x Fruit Complex"
+    ],
+    "category": "treatment",
+    "status": "active",
+    "concernIds": [
+      "dullness"
+    ],
+    "mrp": 549,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Vitamin C Face Serum in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": null,
+    "ingredientStatus": "missing",
+    "keyIngredients": [],
+    "ingredientIds": [],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B6:E6",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "barrier-plus-face-serum",
+    "slug": "barrier-plus-face-serum",
+    "name": "Barrier Plus Face Serum",
+    "shortName": "Barrier Plus Face Serum",
+    "aliases": [
+      "Panchkruti Barrier Plus Face Serum With Niacinamide"
+    ],
+    "category": "treatment",
+    "status": "active",
+    "concernIds": [
+      "hydration"
+    ],
+    "mrp": 549,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Barrier Plus Face Serum in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": null,
+    "ingredientStatus": "missing",
+    "keyIngredients": [],
+    "ingredientIds": [],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B7:E7",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dark-spot-serum",
+    "slug": "dark-spot-serum",
+    "name": "Dark Spot Serum",
+    "shortName": "Dark Spot Serum",
+    "aliases": [
+      "Panchkruti Dark Spot Removal Serum With Glycolic Acid, Alpha Arbutin & Gotu Kola Ext."
+    ],
+    "category": "treatment",
+    "status": "active",
+    "concernIds": [
+      "pigmentation"
+    ],
+    "mrp": 549,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Dark Spot Serum in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": "Water, Propanediol — 5%, Alpha Hydroxy Acids (AHAs) — 2%, Sodium PCA — 1%, Alpha Arbutin — 1%, L-Glutathione — 1%, Manjistha Extract — 2%, Gotu Kola Extract — 2%, Sugarcane Extract — 2%, Beetroot Extract — 2%, Ginseng Extract — 2%, Licorice Extract — 2%, Curcumin Extract — 2%, Xanthan Gum, Phenoxyethanol, HEC",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Water",
+      "Propanediol — 5%",
+      "Alpha Hydroxy Acids (AHAs) — 2%",
+      "Sodium PCA — 1%",
+      "Alpha Arbutin — 1%",
+      "L-Glutathione — 1%",
+      "Manjistha Extract — 2%",
+      "Gotu Kola Extract — 2%",
+      "Sugarcane Extract — 2%",
+      "Beetroot Extract — 2%",
+      "Ginseng Extract — 2%",
+      "Licorice Extract — 2%",
+      "Curcumin Extract — 2%",
+      "Xanthan Gum",
+      "Phenoxyethanol",
+      "HEC"
+    ],
+    "ingredientIds": [
+      "alpha-arbutin",
+      "aha",
+      "licorice",
+      "manjistha",
+      "gotu-kola",
+      "glutathione",
+      "curcumin"
+    ],
+    "benefits": [],
+    "timing": [
+      "PM"
+    ],
+    "usage": {
+      "amount": null,
+      "instructions": "Use in the supplied night sequence after cleansing.",
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B8:E8",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "User brief",
+        "fields": [
+          "ingredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acne-defense-serum",
+    "slug": "acne-defense-serum",
+    "name": "Acne Defense Serum",
+    "shortName": "Acne Defense Serum",
+    "aliases": [
+      "Acne Defense Serum With Salicylic Acid, Mandelic Acid & Willow Bark Extract"
+    ],
+    "category": "treatment",
+    "status": "discontinued",
+    "concernIds": [
+      "acne"
+    ],
+    "mrp": 549,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Acne Defense Serum in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": "Water, Salicylic Acid (0.5%), Mandelic Acid (0.5%), Willow Bark Extract (4%), Zinc PCA (1%), Sodium PCA (1%),\nD-Panthenol (Pro-Vitamin B5) (1%), Niacinamide (Vitamin B3)(3%), Nagkesar Extract (4%), Lodhara Extract (4%),\nManjistha Extract (4%), Xanthan Gum, Phenoxy Ethanol",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Salicylic Acid — 0.5%",
+      "Mandelic Acid — 0.5%",
+      "Nagkesar — 4%",
+      "Lodhra — 4%"
+    ],
+    "ingredientIds": [],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B9:E9",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D3:E3",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rose-toner",
+    "slug": "rose-toner",
+    "name": "Rose Toner",
+    "shortName": "Rose Toner",
+    "aliases": [
+      "Panchkruti Rose & Lilly Face Toner"
+    ],
+    "category": "moisturiser-care",
+    "status": "active",
+    "concernIds": [
+      "hydration"
+    ],
+    "mrp": 249,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Rose Toner in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": "Rose Water, Lilly water, Niacinamide",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Rose Water",
+      "Lilly water",
+      "Niacinamide"
+    ],
+    "ingredientIds": [
+      "niacinamide"
+    ],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B10:E10",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D7:E7",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cera-dew-spray-moisturiser",
+    "slug": "cera-dew-spray-moisturiser",
+    "name": "Cera Dew Spray Moisturiser",
+    "shortName": "Cera Dew Spray Moisturiser",
+    "aliases": [
+      "Panchkruti Spray Moisturizer with Ceramide Complex"
+    ],
+    "category": "moisturiser-care",
+    "status": "active",
+    "concernIds": [
+      "hydration"
+    ],
+    "mrp": 449,
+    "sellingPrice": null,
+    "size": {
+      "value": 100,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Cera Dew Spray Moisturiser in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": "Aqua (Water), Methylpropanediol, Glycerine, 0.5% Ceramide Complex,  1% Hyaluronic Acid, 2% AQUAXYL™, 1% Squalane Olive, 2% Ashwagandha, 2% Liquorice Root Ext., 2% Manjistha Ext., 4% 2% Basil Ext., 2% Almond Peel Ext., 2% Coconut Milk Ext., 1% Baobab Ext., 1% Macadamia Seed, Phenoxyethanol,Ethylhexylglycerin",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Ceramide Complex — 0.5%",
+      "AQUAXYL™ — 2%",
+      "Ashwagandha Extract — 2%",
+      "Manjistha Extract — 2%"
+    ],
+    "ingredientIds": [
+      "licorice",
+      "manjistha",
+      "ceramide-complex"
+    ],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B11:E11",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D8:E8",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sunscreen-spf-50-pa-plus-plus-plus",
+    "slug": "sunscreen-spf-50-pa-plus-plus-plus",
+    "name": "Sunscreen SPF 50 PA+++",
+    "shortName": "Sunscreen SPF 50 PA+++",
+    "aliases": [
+      "Panchkruti Mineral Shield Sunscreen Gel SPF 50 pa+++ With Zinc Oxide"
+    ],
+    "category": "protection",
+    "status": "active",
+    "concernIds": [
+      "sun-protection"
+    ],
+    "mrp": 499,
+    "sellingPrice": null,
+    "size": {
+      "value": 50,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Sunscreen SPF 50 PA+++ in the Panchkruti sun protection range.",
+    "longDescription": null,
+    "fullIngredients": null,
+    "ingredientStatus": "partial",
+    "keyIngredients": [
+      "Zinc Oxide",
+      "Transparent Zinc Oxide",
+      "Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+      "Ethylhexyl Triazone",
+      "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",
+      "Ceramide EOP, Ceramide NS, Ceramide NP, Ceramide AS, Ceramide AP",
+      "Cholesterol, Hydrogenated Lecithin, Phospholipids"
+    ],
+    "ingredientIds": [
+      "zinc-oxide"
+    ],
+    "benefits": [],
+    "timing": [
+      "AM"
+    ],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B12:E12",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "Replit products.ts; user confirmed current formulas",
+        "fields": [
+          "ingredients"
+        ]
+      },
+      {
+        "document": "User brief",
+        "fields": [
+          "mrp"
+        ],
+        "note": "Overrides older workbook MRP"
+      }
+    ]
+  },
+  {
+    "id": "dark-spot-cream",
+    "slug": "dark-spot-cream",
+    "name": "Dark Spot Cream",
+    "shortName": "Dark Spot Cream",
+    "aliases": [
+      "Dark Spot Removal Cream with Green Tea, Liquorice and Haldi"
+    ],
+    "category": "treatment",
+    "status": "active",
+    "concernIds": [
+      "pigmentation"
+    ],
+    "mrp": 499,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Dark Spot Cream in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": "Aqua (Water), Ceto Stearyl Alcohol, Ethylene Glycol Monostearate, Bri) 58, Polysorbate 20,  Helianthue Annuus (Sunflower) Oil, Isopropyl Myristate, Licorice Extract (3%), Turmeric Extract (3%), Green Tea Extract (3%), Honey Extract (3%), Jasmine Extract (3%), Palash Extract (3%), Niacinamide (Vitamin B3) (4%), Panthenol (Provitamin B5) (1%), Allantoin, Glycerin, Aqua SF-1, PQ-7, Tocopheryl Acetate (Vitamin E), Potassium Sorbate, Benzyl Alcohol",
+    "ingredientStatus": "supplied",
+    "keyIngredients": [
+      "Niacinamide — 4%",
+      "Liquorice Extract — 3%",
+      "Turmeric Extract — 3%",
+      "Green Tea Extract — 3%"
+    ],
+    "ingredientIds": [
+      "niacinamide",
+      "licorice"
+    ],
+    "benefits": [],
+    "timing": [
+      "AM"
+    ],
+    "usage": {
+      "amount": null,
+      "instructions": "Use in the supplied morning sequence after cleansing and before sunscreen.",
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B13:E13",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "List of Products,Name, Ingredients.xlsx",
+        "sheet": "Panchkruti",
+        "range": "D6:E6",
+        "fields": [
+          "ingredients",
+          "keyIngredients"
+        ]
+      },
+      {
+        "document": "User brief",
+        "fields": [
+          "mrp"
+        ],
+        "note": "Overrides older workbook MRP"
+      }
+    ]
+  },
+  {
+    "id": "acne-defense-gel",
+    "slug": "acne-defense-gel",
+    "name": "Acne Defense Gel",
+    "shortName": "Acne Defense Gel",
+    "aliases": [
+      "Acne Defense Face Gel With Salicylic Acid, Mandelic Acid & Cinnamon Bark Ext."
+    ],
+    "category": "treatment",
+    "status": "active",
+    "concernIds": [
+      "acne"
+    ],
+    "mrp": 499,
+    "sellingPrice": null,
+    "size": {
+      "value": 30,
+      "unit": "ml",
+      "sourceLabel": "Size (ml)"
+    },
+    "images": [],
+    "description": "Acne Defense Gel in the Panchkruti skincare range.",
+    "longDescription": null,
+    "fullIngredients": null,
+    "ingredientStatus": "partial",
+    "keyIngredients": [
+      "Manjistha Extract — 2%",
+      "Zinc PCA — 1%",
+      "Nagkesar Extract — 1%",
+      "Liquorice Extract — 1%",
+      "Salicylic Acid — 0.5%",
+      "Succinic Acid — 0.5%",
+      "Bisabolol — 0.5%",
+      "Sodium Hyaluronate — 0.5%",
+      "Allantoin — 0.3%",
+      "Acacia Senegal Gum + Xanthan Gum — 0.5%",
+      "Also contains Aloe Vera, Glycerin, Isopentyldiol, Sodium Polyacryloyldimethyl Taurate, Niacinamide, Triphala Extract, Bakuchiol and Lactic Acid."
+    ],
+    "ingredientIds": [
+      "niacinamide",
+      "lactic-acid",
+      "licorice",
+      "manjistha",
+      "salicylic-acid",
+      "succinic-acid"
+    ],
+    "benefits": [],
+    "timing": [],
+    "usage": {
+      "amount": null,
+      "instructions": null,
+      "frequency": null
+    },
+    "precautions": [],
+    "contraindications": null,
+    "compatibility": [],
+    "ecommerceUrl": null,
+    "sources": [
+      {
+        "document": "SKU MASTER LIST.xlsx",
+        "sheet": "Sheet2",
+        "range": "B14:E14",
+        "fields": [
+          "alias",
+          "size",
+          "mrp"
+        ]
+      },
+      {
+        "document": "Replit products.ts; user confirmed current formulas",
+        "fields": [
+          "ingredients"
+        ]
+      },
+      {
+        "document": "User brief",
+        "fields": [
+          "mrp"
+        ],
+        "note": "Overrides older workbook MRP"
+      }
+    ]
+  }
+]

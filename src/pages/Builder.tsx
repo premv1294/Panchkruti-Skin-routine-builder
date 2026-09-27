@@ -1,0 +1,12 @@
+import {useEffect,useRef,useState} from 'react';
+import {useLocation} from 'wouter';
+import {ArrowLeft,ArrowRight} from 'lucide-react';
+import {questions,type Answers} from '../data/questionnaire';
+import {track} from '../services/analytics';
+export default function Builder({onComplete}:{onComplete:(a:Answers)=>void}){
+const [step,setStep]=useState(0),[answers,setAnswers]=useState<Answers>({});const [,navigate]=useLocation();const heading=useRef<HTMLHeadingElement>(null);
+useEffect(()=>{track('routine_builder_started');},[]);
+useEffect(()=>{heading.current?.focus();},[step]);
+const q=questions[step];
+return <div className="builder page-width"><div className="builder-sidebar"><p className="eyebrow">YOUR ROUTINE, WITH CONTEXT</p><h1>A few questions.<br/><em>A clearer starting point.</em></h1><p>We use your main concern to find an available routine. Your other answers highlight where further guidance is needed.</p><p className="muted">This guide does not diagnose skin conditions or assess individual product tolerance.</p></div><section className="question-card"><div className="question-progress"><span>QUESTION {step+1} OF {questions.length}</span><span>{Math.round(step/questions.length*100)}%</span></div><progress aria-label="Questionnaire progress" value={step} max={questions.length}/><form onSubmit={e=>{e.preventDefault();if(!answers[q.id])return;track('routine_question_answered',{questionId:q.id});if(step<questions.length-1)setStep(step+1);else{onComplete(answers);track('routine_completed',{id:answers.concern});navigate('/routine-results');}}}><h2 ref={heading} tabIndex={-1}>{q.title}</h2><p id="question-hint">{q.hint}</p><fieldset aria-describedby="question-hint"><legend className="sr-only">{q.title}</legend>{q.options.map(o=><label key={o.value} className={'answer-option '+(answers[q.id]===o.value?'selected':'')}><input type="radio" name={q.id} value={o.value} checked={answers[q.id]===o.value} onChange={()=>setAnswers({...answers,[q.id]:o.value})}/><span>{o.label}</span></label>)}</fieldset><div className="question-actions"><button type="button" className="text-link" onClick={()=>setStep(step-1)} disabled={step===0}><ArrowLeft size={16}/> Back</button><button className="button" disabled={!answers[q.id]} type="submit">{step===questions.length-1?'See my routine':'Continue'} <ArrowRight size={16}/></button></div></form></section></div>;
+}
